@@ -21,21 +21,26 @@ int main() {
 	cout << "Enter the student's marks: ";
 	cin >> s.marks;
 
-	//display all details using arrow operator
-	cout << endl << "Student details:" << endl;
-	cout << "Roll number: " << sptr->rollNo << endl;
-	cout << "Name: " << sptr->name << endl;
-	cout << "Marks: " << sptr->marks << endl;
+	//check that sptr is not nullptr before accessing its fields
+	if (sptr != nullptr) {
+		//display all details using arrow operator
+		cout << endl << "Student details:" << endl;
+		cout << "Roll number: " << sptr->rollNo << endl;
+		cout << "Name: " << sptr->name << endl;
+		cout << "Marks: " << sptr->marks << endl;
 
-	//update marks with new value given by user
-	cout << endl << "Enter a new value for marks: ";
-	cin >> sptr->marks;
+		//update marks with new value given by user
+		cout << endl << "Enter a new value for marks: ";
+		cin >> sptr->marks;
 
-	//display updated record 
-	cout << endl << "Student details after update:" << endl;
-	cout << "Roll number: " << sptr->rollNo << endl;
-	cout << "Name: " << sptr->name << endl;
-	cout << "Marks: " << sptr->marks << endl;
+		//display updated record 
+		cout << endl << "Student details after update:" << endl;
+		cout << "Roll number: " << sptr->rollNo << endl;
+		cout << "Name: " << sptr->name << endl;
+		cout << "Marks: " << sptr->marks << endl;
+	}
+	else
+		cout << "Error" << endl;
 
 	return 0;
 }
