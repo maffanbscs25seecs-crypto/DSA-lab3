@@ -1,3 +1,7 @@
+//Name: Muhammad Affan
+//Registration number: 577327
+//Section: BSCS15-E
+
 #include <iostream>
 #include <string>
 using namespace std;
